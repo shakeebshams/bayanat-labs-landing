@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  body{margin:0;background:#fff;}
+  ::selection{background:#4f46e5;color:#fff;}
+  @keyframes shimmer{0%,100%{filter:brightness(1);}50%{filter:brightness(1.05);}}
+  @keyframes floaty{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
+  @keyframes floaty2{0%,100%{transform:translateY(0) rotate(0deg);}50%{transform:translateY(-9px) rotate(-1.2deg);}}
+  @keyframes ping{0%{transform:translate(-50%,-50%) scale(.5);opacity:.5;}70%,100%{transform:translate(-50%,-50%) scale(2.4);opacity:0;}}
+</style>
+<template id="__bundler_thumbnail" data-bg-color="#ffffff">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#ffffff"/>
+    <defs><linearGradient id="t" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a5b4fc"/><stop offset=".35" stop-color="#818cf8"/>
+      <stop offset=".6" stop-color="#4f46e5"/><stop offset=".85" stop-color="#4338ca"/><stop offset="1" stop-color="#a5b4fc"/>
+    </linearGradient></defs>
+    <path d="M120 520 C 360 380, 540 600, 760 460 S 1080 360, 1100 420" fill="none" stroke="url(#t)" stroke-width="120" stroke-linecap="round" opacity=".85"/>
+    <text x="120" y="240" font-family="Helvetica,Arial,sans-serif" font-size="92" font-weight="700" fill="#0b0b0d" letter-spacing="-3">Bayanat Labs</text>
+  </svg>
+</template>
+</helmet>
+
+<div data-screen-label="Bayanat Labs — Indigo" style="width:1280px;margin:0 auto;background:#fff;color:#0b0b0d;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;overflow:hidden;position:relative;">
+
+  <!-- ambient edge color art -->
+  <div style="position:absolute;top:380px;left:-160px;width:300px;height:1100px;animation:shimmer 18s linear infinite;pointer-events:none;z-index:0;">
+    <div style="width:100%;height:100%;background:conic-gradient(from 140deg,#a5b4fc,#818cf8,#4f46e5,#4338ca,#6366f1,#a5b4fc);filter:blur(70px);opacity:.32;border-radius:50%;"></div>
+  </div>
+  <div style="position:absolute;top:1500px;right:-180px;width:320px;height:900px;animation:shimmer 22s linear infinite;pointer-events:none;z-index:0;">
+    <div style="width:100%;height:100%;background:conic-gradient(from 300deg,#818cf8,#4f46e5,#4338ca,#a5b4fc,#818cf8);filter:blur(75px);opacity:.3;border-radius:50%;"></div>
+  </div>
+
+  <!-- NAV -->
+  <div style="position:relative;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:30px 64px;">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="width:14px;height:14px;border-radius:50%;background:conic-gradient(from 0deg,#a5b4fc,#818cf8,#4f46e5,#4338ca,#a5b4fc);animation:shimmer 10s linear infinite;"></div>
+      <span style="font-weight:700;font-size:18px;letter-spacing:-.01em;">Bayanat Labs</span>
+    </div>
+    <div style="display:flex;gap:36px;align-items:center;font-size:15px;color:#3a3a3e;">
+      <span>Platform</span><span>Solutions</span><span>Company</span>
+      <span style="background:#0b0b0d;color:#fff;padding:11px 22px;border-radius:8px;font-size:14px;font-weight:600;">Get started</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="position:relative;z-index:2;display:grid;grid-template-columns:0.92fr 1.08fr;gap:30px;padding:64px 64px 90px;align-items:center;">
+    <div>
+      <div style="display:inline-flex;align-items:center;gap:8px;font-family:IBM Plex Mono,monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#4f46e5;margin-bottom:30px;">
+        <span style="width:6px;height:6px;border-radius:50%;background:#4f46e5;"></span> Arabic AI data lab · MENA
+      </div>
+      <h1 style="font-size:78px;line-height:.98;font-weight:700;letter-spacing:-.035em;margin:0 0 26px;">Arabic data,<br>done right.</h1>
+      <p style="font-size:20px;line-height:1.55;color:#52525b;max-width:430px;margin:0 0 38px;">The expert human data engine for the Middle East — dialect-aware labeling, feedback, and evaluation that makes Arabic AI actually work.</p>
+      <div style="display:flex;align-items:center;gap:18px;margin-bottom:34px;">
+        <span style="background:#0b0b0d;color:#fff;font-weight:600;padding:15px 30px;border-radius:9px;font-size:16px;">Partner with us</span>
+        <span style="color:#0b0b0d;font-weight:600;font-size:16px;">See how it works →</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:13px;">
+        <span style="color:#4f46e5;font-size:15px;letter-spacing:2px;">★★★★★</span>
+        <span style="font-size:14px;color:#71717a;">Built by native speakers across 25+ dialects</span>
+      </div>
+    </div>
+
+    <!-- hero graphic -->
+    <div style="position:relative;height:560px;">
+      <!-- iridescent blob -->
+      <div style="position:absolute;top:10px;right:30px;width:520px;height:520px;animation:shimmer 14s linear infinite;">
+        <div style="width:100%;height:100%;background:conic-gradient(from 120deg,#a5b4fc,#818cf8,#4f46e5,#4338ca,#6366f1,#a5b4fc,#a5b4fc);filter:blur(46px);opacity:.6;border-radius:48% 52% 56% 44%/52% 46% 54% 48%;"></div>
+      </div>
+      <!-- glass ribbon -->
+      <div style="position:absolute;top:-40px;right:-10px;width:560px;height:640px;animation:shimmer 16s linear infinite;">{{ heroRibbon }}</div>
+
+      <!-- console mockup -->
+      <div style="position:absolute;top:120px;left:-30px;width:430px;background:#fff;border-radius:14px;box-shadow:0 30px 70px -20px rgba(20,20,60,.32);border:1px solid #ececf2;overflow:hidden;animation:floaty 7s ease-in-out infinite;">
+        <div style="display:flex;align-items:center;gap:7px;padding:13px 16px;border-bottom:1px solid #f1f1f5;">
+          <span style="width:11px;height:11px;border-radius:50%;background:#ff5f57;"></span>
+          <span style="width:11px;height:11px;border-radius:50%;background:#febc2e;"></span>
+          <span style="width:11px;height:11px;border-radius:50%;background:#28c840;"></span>
+          <span style="margin-left:auto;font-family:IBM Plex Mono,monospace;font-size:11px;color:#a1a1aa;">bayanat / console</span>
+        </div>
+        <div style="padding:18px 18px 20px;">
+          <div style="font-family:IBM Plex Mono,monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#a1a1aa;margin-bottom:10px;">Dialect annotation · Gulf</div>
+          <div dir="rtl" style="font-size:19px;line-height:1.9;color:#18181b;text-align:right;">
+            وش رايك نطلع <span style="background:rgba(129,140,248,.16);border-bottom:2px solid #818cf8;padding:1px 4px;border-radius:3px;">القهوة</span> بعد <span style="background:rgba(67,56,202,.14);border-bottom:2px solid #4338ca;padding:1px 4px;border-radius:3px;">العصر</span>؟
+          </div>
+          <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;">
+            <span style="font-size:12px;background:rgba(129,140,248,.12);color:#4338ca;padding:5px 11px;border-radius:99px;">place · café</span>
+            <span style="font-size:12px;background:rgba(67,56,202,.1);color:#4338ca;padding:5px 11px;border-radius:99px;">time · afternoon</span>
+            <span style="font-size:12px;background:#f4f4f5;color:#52525b;padding:5px 11px;border-radius:99px;">intent · invite</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:18px;padding-top:14px;border-top:1px solid #f1f1f5;">
+            <span style="font-family:IBM Plex Mono,monospace;font-size:11px;color:#a1a1aa;">QA · gold-checked</span>
+            <span style="display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#16a34a;"><span style="width:7px;height:7px;border-radius:50%;background:#16a34a;"></span>Approved</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- floating rater chip -->
+      <div style="position:absolute;top:60px;right:-6px;width:248px;background:#0b0b0d;color:#fff;border-radius:12px;padding:15px 17px;box-shadow:0 24px 50px -18px rgba(0,0,0,.5);animation:floaty2 6s ease-in-out infinite;">
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:10px;">
+          <div style="width:26px;height:26px;border-radius:50%;background:conic-gradient(from 40deg,#a5b4fc,#4f46e5,#4338ca);"></div>
+          <div><div style="font-size:13px;font-weight:600;">Layla · MSA expert</div></div>
+        </div>
+        <div style="font-size:12.5px;line-height:1.5;color:#c7c7cf;">Ranked 4 model responses — preferred the one matching Najdi register.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGO STRIP -->
+  <div style="position:relative;z-index:2;padding:18px 64px 70px;">
+    <div style="font-family:IBM Plex Mono,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#a1a1aa;text-align:center;margin-bottom:26px;">Powering Arabic AI teams across the region</div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:56px;opacity:.45;flex-wrap:wrap;">
+      <span style="font-weight:700;font-size:21px;letter-spacing:-.02em;">NA·MIRA</span>
+      <span style="font-weight:700;font-size:21px;letter-spacing:.05em;">QAMAR</span>
+      <span style="font-weight:700;font-size:21px;font-style:italic;">salaf</span>
+      <span style="font-weight:700;font-size:21px;letter-spacing:-.01em;">Tariq AI</span>
+      <span style="font-weight:700;font-size:21px;letter-spacing:.1em;">M E S H</span>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <div style="position:relative;z-index:2;padding:40px 64px 30px;text-align:center;">
+    <h2 style="font-size:50px;font-weight:700;letter-spacing:-.03em;line-height:1.04;margin:0 auto;max-width:620px;">Our data engine is more than just labeling.</h2>
+  </div>
+  <div style="position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:22px;padding:54px 64px 30px;">
+    <div style="border:1px solid #ededf2;border-radius:18px;padding:38px 36px;background:#fff;">
+      <div style="width:46px;height:46px;border-radius:11px;background:#f5f5f7;display:flex;align-items:center;justify-content:center;margin-bottom:26px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0b0b0d" stroke-width="1.6"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+      </div>
+      <h3 style="font-size:23px;font-weight:700;letter-spacing:-.01em;margin:0 0 12px;">Dialect-aware annotation</h3>
+      <p style="font-size:15px;line-height:1.6;color:#71717a;margin:0;">Collection, transcription and labeling across 25+ spoken Arabic varieties — the informal language that barely exists in digitized form.</p>
+    </div>
+    <div style="border:1px solid #ededf2;border-radius:18px;padding:38px 36px;background:#fff;">
+      <div style="width:46px;height:46px;border-radius:11px;background:#f5f5f7;display:flex;align-items:center;justify-content:center;margin-bottom:26px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0b0b0d" stroke-width="1.6"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 1v4M14 1v4M10 19v4M14 19v4M1 10h4M1 14h4M19 10h4M19 14h4"/></svg>
+      </div>
+      <h3 style="font-size:23px;font-weight:700;letter-spacing:-.01em;margin:0 0 12px;">Human feedback &amp; RLHF</h3>
+      <p style="font-size:15px;line-height:1.6;color:#71717a;margin:0;">Native speakers ranking, correcting and rewriting model outputs — teaching Arabic models what a good, natural, culturally-right answer sounds like.</p>
+    </div>
+    <div style="border:1px solid #ededf2;border-radius:18px;padding:38px 36px;background:#fff;">
+      <div style="width:46px;height:46px;border-radius:11px;background:#f5f5f7;display:flex;align-items:center;justify-content:center;margin-bottom:26px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0b0b0d" stroke-width="1.6"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5zM3 7l9 5 9-5M12 12v10"/></svg>
+      </div>
+      <h3 style="font-size:23px;font-weight:700;letter-spacing:-.01em;margin:0 0 12px;">Domain experts</h3>
+      <p style="font-size:15px;line-height:1.6;color:#71717a;margin:0;">Medical, legal and financial Arabic produced and judged by actual doctors, lawyers and bankers — where accuracy is non-negotiable.</p>
+    </div>
+    <div style="border:1px solid #ededf2;border-radius:18px;padding:38px 36px;background:#fff;">
+      <div style="width:46px;height:46px;border-radius:11px;background:#f5f5f7;display:flex;align-items:center;justify-content:center;margin-bottom:26px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0b0b0d" stroke-width="1.6"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+      </div>
+      <h3 style="font-size:23px;font-weight:700;letter-spacing:-.01em;margin:0 0 12px;">Evaluation &amp; benchmarks</h3>
+      <p style="font-size:15px;line-height:1.6;color:#71717a;margin:0;">Independent measurement of Arabic model quality — dialect comprehension, cultural fit, factuality and safety — so you know what's good before you ship.</p>
+    </div>
+  </div>
+
+  <!-- DIALECT COVERAGE -->
+  <div style="position:relative;z-index:2;display:grid;grid-template-columns:0.82fr 1.18fr;gap:54px;align-items:center;padding:96px 64px 74px;">
+    <div>
+      <div style="font-family:IBM Plex Mono,monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#4f46e5;margin-bottom:18px;">Arabic language expertise</div>
+      <h2 style="font-size:50px;font-weight:700;letter-spacing:-.03em;line-height:1.04;margin:0 0 22px;">Native expertise.<br>Regional understanding.</h2>
+      <p style="font-size:18px;line-height:1.6;color:#52525b;max-width:430px;margin:0 0 34px;">We work with native linguists and domain experts across the region — capturing the richness, nuance and diversity of spoken Arabic, dialect by dialect.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px 26px;margin-bottom:40px;max-width:480px;">
+        <div style="display:flex;align-items:center;gap:11px;font-size:14.5px;color:#27272a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Modern Standard Arabic</span></div>
+        <div style="display:flex;align-items:center;gap:11px;font-size:14.5px;color:#27272a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Gulf · Saudi, Emirati, Kuwaiti</span></div>
+        <div style="display:flex;align-items:center;gap:11px;font-size:14.5px;color:#27272a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Levantine Arabic</span></div>
+        <div style="display:flex;align-items:center;gap:11px;font-size:14.5px;color:#27272a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Egyptian Arabic</span></div>
+        <div style="display:flex;align-items:center;gap:11px;font-size:14.5px;color:#27272a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Iraqi Arabic</span></div>
+        <div style="display:flex;align-items:center;gap:11px;font-size:14.5px;color:#27272a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Maghrebi · North African</span></div>
+      </div>
+      <span style="display:inline-flex;align-items:center;gap:10px;background:#0b0b0d;color:#fff;font-weight:600;padding:14px 28px;border-radius:10px;font-size:15px;">Explore coverage <span style="font-size:17px;">→</span></span>
+    </div>
+
+    <div style="position:relative;width:100%;aspect-ratio:100/78;">
+      <div style="position:absolute;inset:0;">{{ dialectMap }}</div>
+
+      <!-- count chip -->
+      <div style="position:absolute;left:1%;top:3%;display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid #ededf2;border-radius:99px;padding:8px 16px 8px 13px;box-shadow:0 10px 28px -12px rgba(20,20,50,.2);">
+        <span style="font-size:22px;font-weight:700;letter-spacing:-.02em;color:#0b0b0d;">25+</span>
+        <span style="font-size:11px;color:#71717a;line-height:1.25;">dialect<br>varieties</span>
+      </div>
+
+      <!-- pins -->
+      <div style="position:absolute;left:14%;top:64%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;pointer-events:none;">
+        <div style="background:#fff;border-radius:9px;padding:6px 12px;box-shadow:0 10px 24px -8px rgba(20,20,50,.28);text-align:center;margin-bottom:7px;white-space:nowrap;"><div dir="rtl" style="font-size:14px;font-weight:700;color:#18181b;line-height:1.1;">المغرب</div><div style="font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:#a1a1aa;margin-top:1px;">Maghrebi</div></div>
+        <svg width="20" height="26" viewBox="0 0 24 32" style="filter:drop-shadow(0 5px 8px rgba(20,20,50,.22));"><path d="M12 0C5.4 0 0 5.3 0 11.9 0 20 12 32 12 32S24 20 24 11.9C24 5.3 18.6 0 12 0z" fill="#4f46e5"/><circle cx="12" cy="12" r="4.4" fill="#fff"/></svg>
+      </div>
+      <div style="position:absolute;left:33%;top:54%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;pointer-events:none;">
+        <div style="background:#fff;border-radius:9px;padding:6px 12px;box-shadow:0 10px 24px -8px rgba(20,20,50,.28);text-align:center;margin-bottom:7px;white-space:nowrap;"><div dir="rtl" style="font-size:14px;font-weight:700;color:#18181b;line-height:1.1;">الجزائر</div><div style="font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:#a1a1aa;margin-top:1px;">Algerian</div></div>
+        <svg width="20" height="26" viewBox="0 0 24 32" style="filter:drop-shadow(0 5px 8px rgba(20,20,50,.22));"><path d="M12 0C5.4 0 0 5.3 0 11.9 0 20 12 32 12 32S24 20 24 11.9C24 5.3 18.6 0 12 0z" fill="#4f46e5"/><circle cx="12" cy="12" r="4.4" fill="#fff"/></svg>
+      </div>
+      <div style="position:absolute;left:52%;top:65%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;pointer-events:none;">
+        <div style="background:#fff;border-radius:9px;padding:6px 12px;box-shadow:0 10px 24px -8px rgba(20,20,50,.28);text-align:center;margin-bottom:7px;white-space:nowrap;"><div dir="rtl" style="font-size:14px;font-weight:700;color:#18181b;line-height:1.1;">مصر</div><div style="font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:#a1a1aa;margin-top:1px;">Egyptian</div></div>
+        <svg width="20" height="26" viewBox="0 0 24 32" style="filter:drop-shadow(0 5px 8px rgba(20,20,50,.22));"><path d="M12 0C5.4 0 0 5.3 0 11.9 0 20 12 32 12 32S24 20 24 11.9C24 5.3 18.6 0 12 0z" fill="#4f46e5"/><circle cx="12" cy="12" r="4.4" fill="#fff"/></svg>
+      </div>
+      <div style="position:absolute;left:63%;top:45%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;pointer-events:none;">
+        <div style="background:#fff;border-radius:9px;padding:6px 12px;box-shadow:0 10px 24px -8px rgba(20,20,50,.28);text-align:center;margin-bottom:7px;white-space:nowrap;"><div dir="rtl" style="font-size:14px;font-weight:700;color:#18181b;line-height:1.1;">الشام</div><div style="font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:#a1a1aa;margin-top:1px;">Levantine</div></div>
+        <svg width="20" height="26" viewBox="0 0 24 32" style="filter:drop-shadow(0 5px 8px rgba(20,20,50,.22));"><path d="M12 0C5.4 0 0 5.3 0 11.9 0 20 12 32 12 32S24 20 24 11.9C24 5.3 18.6 0 12 0z" fill="#4f46e5"/><circle cx="12" cy="12" r="4.4" fill="#fff"/></svg>
+      </div>
+      <div style="position:absolute;left:78%;top:69%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center;pointer-events:none;">
+        <div style="position:absolute;left:50%;bottom:0;width:14px;height:14px;border-radius:50%;background:#4f46e5;transform:translate(-50%,-50%);animation:ping 2.6s ease-out infinite;"></div>
+        <div style="background:#fff;border-radius:9px;padding:6px 12px;box-shadow:0 10px 24px -8px rgba(20,20,50,.28);text-align:center;margin-bottom:7px;white-space:nowrap;"><div dir="rtl" style="font-size:14px;font-weight:700;color:#18181b;line-height:1.1;">الخليج</div><div style="font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:#a1a1aa;margin-top:1px;">Gulf</div></div>
+        <svg width="20" height="26" viewBox="0 0 24 32" style="filter:drop-shadow(0 5px 8px rgba(20,20,50,.22));"><path d="M12 0C5.4 0 0 5.3 0 11.9 0 20 12 32 12 32S24 20 24 11.9C24 5.3 18.6 0 12 0z" fill="#4f46e5"/><circle cx="12" cy="12" r="4.4" fill="#fff"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div style="position:relative;z-index:2;padding:96px 64px 60px;">
+    <div style="text-align:center;margin-bottom:64px;">
+      <div style="font-family:IBM Plex Mono,monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#4f46e5;margin-bottom:16px;">How it works</div>
+      <h2 style="font-size:50px;font-weight:700;letter-spacing:-.03em;margin:0 auto;max-width:560px;line-height:1.05;">Quality is engineered, not hoped for.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:20px;">
+      <div><div style="font-family:IBM Plex Mono,monospace;font-size:13px;color:#4f46e5;margin-bottom:16px;">01</div><div style="height:2px;background:linear-gradient(90deg,#818cf8,#4f46e5);margin-bottom:18px;"></div><h4 style="font-size:18px;font-weight:700;margin:0 0 8px;">Vet</h4><p style="font-size:13.5px;line-height:1.55;color:#71717a;margin:0;">Dialect tests and domain screening for every contributor.</p></div>
+      <div><div style="font-family:IBM Plex Mono,monospace;font-size:13px;color:#4f46e5;margin-bottom:16px;">02</div><div style="height:2px;background:#ececf0;margin-bottom:18px;"></div><h4 style="font-size:18px;font-weight:700;margin:0 0 8px;">Train</h4><p style="font-size:13.5px;line-height:1.55;color:#71717a;margin:0;">Calibrate on gold-standard tasks and rubrics.</p></div>
+      <div><div style="font-family:IBM Plex Mono,monospace;font-size:13px;color:#4f46e5;margin-bottom:16px;">03</div><div style="height:2px;background:#ececf0;margin-bottom:18px;"></div><h4 style="font-size:18px;font-weight:700;margin:0 0 8px;">Produce</h4><p style="font-size:13.5px;line-height:1.55;color:#71717a;margin:0;">Expert tiers matched to each task type.</p></div>
+      <div><div style="font-family:IBM Plex Mono,monospace;font-size:13px;color:#4f46e5;margin-bottom:16px;">04</div><div style="height:2px;background:#ececf0;margin-bottom:18px;"></div><h4 style="font-size:18px;font-weight:700;margin:0 0 8px;">QA</h4><p style="font-size:13.5px;line-height:1.55;color:#71717a;margin:0;">Gold-standard adjudication and rework loops.</p></div>
+      <div><div style="font-family:IBM Plex Mono,monospace;font-size:13px;color:#4f46e5;margin-bottom:16px;">05</div><div style="height:2px;background:#ececf0;margin-bottom:18px;"></div><h4 style="font-size:18px;font-weight:700;margin:0 0 8px;">Deliver</h4><p style="font-size:13.5px;line-height:1.55;color:#71717a;margin:0;">Clean, structured data — encrypted and on time.</p></div>
+    </div>
+  </div>
+
+  <!-- TESTIMONIAL -->
+  <div style="position:relative;z-index:2;display:grid;grid-template-columns:0.85fr 1.15fr;gap:50px;align-items:center;padding:90px 64px;">
+    <div style="position:relative;height:420px;">
+      <div style="position:absolute;inset:0;animation:shimmer 17s linear infinite;">
+        <div style="width:100%;height:100%;background:conic-gradient(from 200deg,#a5b4fc,#818cf8,#4f46e5,#4338ca,#a5b4fc,#a5b4fc);filter:blur(40px);opacity:.5;border-radius:46% 54% 50% 50%/55% 50% 50% 45%;"></div>
+      </div>
+      <div style="position:absolute;inset:0;animation:shimmer 13s linear infinite;">{{ accentRibbon }}</div>
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" hint-size="240px,240px">
+        <image-slot id="testimonial-portrait" shape="circle" placeholder="Drop portrait" style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:240px;height:240px;"></image-slot>
+      </x-import>
+    </div>
+    <div>
+      <div style="color:#4f46e5;font-size:15px;letter-spacing:2px;margin-bottom:20px;">★★★★★</div>
+      <p style="font-size:28px;line-height:1.45;font-weight:600;letter-spacing:-.015em;margin:0 0 26px;">"Bayanat gave us dialect coverage and rater quality we couldn't assemble ourselves. Our model's Arabic stopped sounding translated."</p>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div><div style="font-size:15px;font-weight:700;">Head of ML, Regional AI Lab</div><div style="font-size:13px;color:#a1a1aa;">Conversational AI · Riyadh</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ENGAGEMENT MODELS -->
+  <div style="position:relative;z-index:2;padding:80px 64px 30px;">
+    <h2 style="font-size:50px;font-weight:700;letter-spacing:-.03em;line-height:1.04;margin:0 0 12px;max-width:560px;">Ways to work with us.</h2>
+    <p style="font-size:18px;color:#71717a;margin:0 0 56px;max-width:480px;line-height:1.55;">From a fast pilot to an embedded team — tiered for bulk volume and premium expert work alike.</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#ededf2;border:1px solid #ededf2;border-radius:18px;overflow:hidden;">
+      <div style="background:#fff;padding:34px 28px;">
+        <div style="font-size:15px;font-weight:700;margin-bottom:6px;">Pilot</div>
+        <div style="font-size:13px;color:#a1a1aa;line-height:1.5;margin-bottom:22px;min-height:54px;">Fixed-scope project to prove quality fast.</div>
+        <div style="font-size:34px;font-weight:700;letter-spacing:-.02em;margin-bottom:22px;">2 wks</div>
+        <div style="font-size:13.5px;color:#52525b;line-height:2.1;">✓ Single task type<br>✓ Dialect screening<br>✓ Gold-standard QA<br>✓ Benchmark report</div>
+        <div style="margin-top:24px;border:1px solid #e4e4ea;border-radius:8px;padding:11px;text-align:center;font-size:14px;font-weight:600;">Start a pilot</div>
+      </div>
+      <div style="background:#fff;padding:34px 28px;">
+        <div style="font-size:15px;font-weight:700;margin-bottom:6px;">Managed</div>
+        <div style="font-size:13px;color:#a1a1aa;line-height:1.5;margin-bottom:22px;min-height:54px;">Ongoing pipeline run end-to-end by us.</div>
+        <div style="font-size:34px;font-weight:700;letter-spacing:-.02em;margin-bottom:22px;">Monthly</div>
+        <div style="font-size:13.5px;color:#52525b;line-height:2.1;">✓ Multi-task workflows<br>✓ RLHF &amp; preference<br>✓ Dedicated QA lead<br>✓ Weekly reporting<br>✓ Custom taxonomies</div>
+        <div style="margin-top:24px;border:1px solid #e4e4ea;border-radius:8px;padding:11px;text-align:center;font-size:14px;font-weight:600;">Get started</div>
+      </div>
+      <div style="background:#0b0b0d;color:#fff;padding:34px 28px;position:relative;">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#a5b4fc,#818cf8,#4f46e5,#4338ca);"></div>
+        <div style="font-size:15px;font-weight:700;margin-bottom:6px;">Embedded</div>
+        <div style="font-size:13px;color:#a1a1aa;line-height:1.5;margin-bottom:22px;min-height:54px;">A dedicated expert team that works as yours.</div>
+        <div style="font-size:34px;font-weight:700;letter-spacing:-.02em;margin-bottom:22px;">Dedicated</div>
+        <div style="font-size:13.5px;color:#d4d4d8;line-height:2.1;">✓ Everything in Managed<br>✓ Domain specialists<br>✓ RL environments<br>✓ Private infrastructure<br>✓ Direct Slack channel</div>
+        <div style="margin-top:24px;background:#fff;color:#0b0b0d;border-radius:8px;padding:11px;text-align:center;font-size:14px;font-weight:600;">Talk to us</div>
+      </div>
+      <div style="background:#fff;padding:34px 28px;">
+        <div style="font-size:15px;font-weight:700;margin-bottom:6px;">Enterprise</div>
+        <div style="font-size:13px;color:#a1a1aa;line-height:1.5;margin-bottom:22px;min-height:54px;">Custom programs for labs &amp; large orgs.</div>
+        <div style="font-size:34px;font-weight:700;letter-spacing:-.02em;margin-bottom:22px;">Custom</div>
+        <div style="font-size:13.5px;color:#52525b;line-height:2.1;">✓ Everything in Embedded<br>✓ Evaluation partnership<br>✓ Proprietary corpora<br>✓ Multi-team scale<br>✓ Custom SLAs</div>
+        <div style="margin-top:24px;border:1px solid #e4e4ea;border-radius:8px;padding:11px;text-align:center;font-size:14px;font-weight:600;">Contact sales</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BIG WAVE CTA -->
+  <div style="position:relative;z-index:2;padding:120px 64px 40px;text-align:center;overflow:hidden;">
+    <h2 style="font-size:58px;font-weight:700;letter-spacing:-.035em;line-height:1.04;margin:0 0 30px;">Build better Arabic AI.<br>Start with the data.</h2>
+    <span style="display:inline-block;background:#0b0b0d;color:#fff;font-weight:600;padding:16px 36px;border-radius:10px;font-size:17px;">Get in touch</span>
+    <div style="position:relative;height:420px;margin-top:10px;animation:shimmer 20s linear infinite;">{{ bottomWave }}</div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="position:relative;z-index:2;border-top:1px solid #ededf2;padding:40px 64px;display:flex;align-items:center;justify-content:space-between;">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="width:13px;height:13px;border-radius:50%;background:conic-gradient(from 0deg,#a5b4fc,#818cf8,#4f46e5,#4338ca,#a5b4fc);"></div>
+      <span style="font-weight:700;font-size:15px;">Bayanat Labs</span>
+    </div>
+    <div style="display:flex;gap:30px;font-size:14px;color:#71717a;"><span>About</span><span>Platform</span><span>Careers</span><span>Contact</span></div>
+    <span style="font-size:13px;color:#a1a1aa;">© 2026 Bayanat Labs · Riyadh</span>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280}}">
+class Component extends DCLogic {
+  buildRibbon(opts) {
+    const o = Object.assign({ w: 560, h: 640, bands: 13, amp: 60, freq: 0.011, phase: 0, baseWidth: 64, gap: 9, opacity: 0.16 }, opts);
+    const gid = 'rg' + Math.random().toString(36).slice(2, 8);
+    const stops = [
+      ['0', '#a5b4fc'], ['0.22', '#818cf8'], ['0.45', '#4f46e5'],
+      ['0.68', '#4338ca'], ['0.85', '#6366f1'], ['1', '#a5b4fc']
+    ];
+    const grad = React.createElement('linearGradient',
+      { id: gid, x1: '0', y1: '0', x2: '1', y2: '0.55' },
+      stops.map((s, i) => React.createElement('stop', { key: i, offset: s[0], stopColor: s[1] }))
+    );
+    const mk = (offY, widthMul, op, ph) => {
+      let d = '';
+      for (let x = 0; x <= o.w; x += 8) {
+        const y = o.h / 2 + offY + Math.sin(x * o.freq + o.phase + ph) * o.amp
+          + Math.sin(x * o.freq * 2.3 + ph) * (o.amp * 0.28);
+        d += (x === 0 ? 'M' : 'L') + x.toFixed(1) + ' ' + y.toFixed(1) + ' ';
+      }
+      return { d, w: o.baseWidth * widthMul, op };
+    };
+    const paths = [];
+    for (let b = 0; b < o.bands; b++) {
+      const t = (b - (o.bands - 1) / 2);
+      const offY = t * o.gap;
+      const widthMul = 1 - Math.abs(t) / (o.bands * 0.85);
+      const p = mk(offY, Math.max(0.18, widthMul), o.opacity, b * 0.16);
+      paths.push(React.createElement('path', {
+        key: b, d: p.d, fill: 'none', stroke: 'url(#' + gid + ')',
+        strokeWidth: p.w, strokeLinecap: 'round', opacity: p.op
+      }));
+    }
+    // crisp glass highlights
+    for (let h = 0; h < 3; h++) {
+      const ph = h * 0.5;
+      let d = '';
+      for (let x = 0; x <= o.w; x += 8) {
+        const y = o.h / 2 + (h - 1) * o.gap * 1.2 + Math.sin(x * o.freq + o.phase + ph) * o.amp
+          + Math.sin(x * o.freq * 2.3 + ph) * (o.amp * 0.28);
+        d += (x === 0 ? 'M' : 'L') + x.toFixed(1) + ' ' + y.toFixed(1) + ' ';
+      }
+      paths.push(React.createElement('path', {
+        key: 'h' + h, d, fill: 'none', stroke: 'rgba(255,255,255,0.7)',
+        strokeWidth: 1.4, strokeLinecap: 'round', opacity: 0.5 - h * 0.13
+      }));
+    }
+    return React.createElement('svg', {
+      viewBox: '0 0 ' + o.w + ' ' + o.h, width: '100%', height: '100%',
+      preserveAspectRatio: o.preserve || 'xMidYMid meet',
+      style: { display: 'block', overflow: 'visible' }
+    }, React.createElement('defs', null, grad), paths);
+  }
+
+  buildDotMap() {
+    const W = 100, H = 78;
+    const ells = [
+      [30, 52, 29, 15],
+      [52, 53, 11, 15],
+      [77, 56, 12, 16],
+      [64, 37, 10, 9],
+      [55, 29, 13, 6],
+      [57, 69, 9, 8]
+    ];
+    const inside = (x, y) => ells.some(e => {
+      const dx = (x - e[0]) / e[2], dy = (y - e[1]) / e[3];
+      return dx * dx + dy * dy <= 1;
+    });
+    const dots = [];
+    const step = 2.5;
+    let i = 0;
+    for (let y = 2; y < H; y += step) {
+      for (let x = 2; x < W; x += step) {
+        if (inside(x, y)) {
+          const op = 0.3 + ((x * 7 + y * 3) % 5) * 0.06;
+          dots.push(React.createElement('circle', {
+            key: i++, cx: x.toFixed(1), cy: y.toFixed(1), r: 0.85,
+            fill: '#8b93a3', opacity: op
+          }));
+        }
+      }
+    }
+    return React.createElement('svg', {
+      viewBox: '0 0 ' + W + ' ' + H, width: '100%', height: '100%',
+      preserveAspectRatio: 'none', style: { display: 'block' }
+    }, dots);
+  }
+
+  renderVals() {
+    return {
+      dialectMap: this.buildDotMap(),
+      heroRibbon: this.buildRibbon({ w: 560, h: 640, bands: 14, amp: 78, freq: 0.0095, phase: 1.2, baseWidth: 70, gap: 11 }),
+      accentRibbon: this.buildRibbon({ w: 360, h: 420, bands: 11, amp: 52, freq: 0.013, phase: 0.4, baseWidth: 52, gap: 9 }),
+      bottomWave: this.buildRibbon({ w: 1180, h: 420, bands: 16, amp: 92, freq: 0.0052, phase: 0.2, baseWidth: 76, gap: 12, preserve: 'none' })
+    };
+  }
+}
+</script>
+</body>
+</html>
